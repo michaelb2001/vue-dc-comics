@@ -41,28 +41,33 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  min-height: 100px;
+  height: 100%;
   img{
     height: 80px;
+    margin: 20px;
   }
+  nav{
 
   ul{
-    list-style-type: none;
-    li{
-      display: inline;
-      margin: 0 5px;
+      list-style-type: none;
 
-      a{
-        text-decoration: none;
-        color: $mainColor;
+      li{
+        display: inline-block;
+        margin: 0 5px;
+  
+        a{
+          display:inline-block;
+          text-decoration: none;
+          color: $mainColor;
+          padding:60px 0px;
+        }
       }
     }
   }
+  
 }
 
-
-
-
-
+.active{
+  border-bottom: 5px solid $activeColor;
+}
 </style>
