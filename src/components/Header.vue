@@ -44,22 +44,23 @@ export default {
   height: 100%;
   img{
     height: 80px;
-    margin: 20px;
+    margin: 20px 0px;
   }
   nav{
+    height: 100%;
 
   ul{
       list-style-type: none;
-
+      height: 100%;
       li{
         display: inline-block;
         margin: 0 5px;
-  
+        height: 100%;
         a{
           display:inline-block;
           text-decoration: none;
           color: $mainColor;
-          padding:60px 0px;
+          height: 100%;
         }
       }
     }

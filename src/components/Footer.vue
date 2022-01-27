@@ -189,5 +189,13 @@ export default {
     }
   }
 
+#dc_bg{
+  height: 300px
+}
+
+.contenitore.tre{
+  background-color: $mainColor;
+  height: calc( 100vh - 640px);
+}
 
 </style>
