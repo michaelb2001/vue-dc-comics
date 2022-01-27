@@ -91,8 +91,30 @@
   </div>
 
     <div class="contenitore tre">
-
+      
     <div class="container">
+      <a href="#" class="btn">sing-up now!</a>
+
+      <div class="social-network">
+        <h5>follow us</h5>
+
+        <a href="#" target="_blank" rel="noopener noreferrer" class="icone_social">
+          <img src="../assets/img/footer-facebook.png" alt="facebook link">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="icone_social">
+          <img src="../assets/img/footer-twitter.png" alt="twitter link">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="icone_social">
+          <img src="../assets/img/footer-youtube.png" alt="youtube link">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="icone_social">
+          <img src="../assets/img/footer-pinterest.png" alt="pinterest link">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="icone_social">
+         <img src="../assets/img/footer-periscope.png" alt="periscope link">
+        </a>
+        
+      </div>
     </div>
 
   </div>
@@ -196,6 +218,46 @@ export default {
 .contenitore.tre{
   background-color: $mainColor;
   height: calc( 100vh - 640px);
+  display: flex;
+  align-items: center;
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn{
+      color: $thirdColor;
+      padding: 15px;
+      border: 2px solid $thirdColor;
+      font-size:$font1mezzo;
+  
+    }
+
+    .social-network{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+
+      h5{
+        color:$thirdColor;
+        font-size:$font1mezzo;
+      }
+
+      .icone_social{
+        img{
+          height: 30px;
+          color: white;
+          margin-left: 10px ;
+        }
+      }
+
+    }
+  }
 }
+
+
 
 </style>
