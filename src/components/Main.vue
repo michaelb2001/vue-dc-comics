@@ -142,7 +142,7 @@ export default {
   .container{
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
     flex-wrap: wrap;
     min-height: 100px;

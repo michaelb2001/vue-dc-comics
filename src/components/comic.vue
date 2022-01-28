@@ -1,8 +1,8 @@
 <template>
-<div class="container">
-    <img :src="comic.thumb">
-    <p>{{comic.series}}</p>
-</div>
+  <div class="container">
+      <img :src="comic.thumb">
+      <p>{{comic.series}}</p>
+  </div>
 </template>
 
 <script>
@@ -21,16 +21,19 @@ export default {
 @import '../assets/style/variables.scss';
 
 .container{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:center;
+  display:flex!important;
+  flex-direction: column!important;
+  align-items: center!important;
+  justify-content:center!important;
   width:200px;
   margin:40px;
-  word-wrap : break;
+  word-wrap : break!important;
+  text-align:center;
+
   img{
     align-self: start;
   }
+
   p{
     color:$secondaryColor;
   }
