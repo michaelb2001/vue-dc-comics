@@ -57,7 +57,7 @@
       <div class="colonna">
         <h3>DC</h3>
         <ul>
->         <li v-for="(element,index) in dc" :key="index">
+          <li v-for="(element,index) in dc" :key="index">
             <a href="">{{element.name.toLowerCase()}}</a>
           </li>
         </ul>
@@ -66,7 +66,7 @@
       <div class="colonna">
         <h3>sites</h3>
         <ul>
->         <li v-for="(element,index) in sites" :key="index">
+          <li v-for="(element,index) in sites" :key="index">
             <a href="">{{element.name.toLowerCase()}}</a>
           </li>
         </ul>
@@ -266,7 +266,7 @@ export default {
     .container{
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: start;
       min-height: 100px;
       width: 100%;
       padding: 20px;

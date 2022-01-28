@@ -1,10 +1,7 @@
 <template>
 <div class="container">
-  <div class="comics" v-for="(element,index) in fumetti" :key="index"
-    :thumb="element.thumb"
-    :series="element.series"
-  >
-  </div>
+    <img :src="comic.thumb">
+    <p>{{comic.series}}</p>
 </div>
 </template>
 
@@ -12,10 +9,8 @@
 export default {
   name: 'Comic',
   props: {
-    thumb: String,
-    price:String,
-    series : String,
-    type : String
+    comic: Object,
+   
   }
 }
 </script>
@@ -23,4 +18,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+@import '../assets/style/variables.scss';
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  width:200px;
+  margin:40px;
+  word-wrap : break;
+  img{
+    align-self: start;
+  }
+  p{
+    color:$secondaryColor;
+  }
+}
 </style>

@@ -8,15 +8,26 @@
 
   <div class="container">
     <div class="striscetta">
+      CURRENT SERIES
     </div>
+
+    
+    <Comic v-for="(comic,index) in fumetti" :key="index" 
+    :comic="comic" />
+  
   </div>
 </div>
 
 </template>
 
 <script>
+import Comic from "./Comic.vue"
+
 export default {
   name: 'Main',
+  components:{
+    Comic
+  },
   data(){
     return {
       fumetti : [
@@ -132,12 +143,12 @@ export default {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
     min-height: 100px;
-    font-size: $fontx2;
     padding: 20px;
 
-    .striscetta{
+  .striscetta{
       position: absolute;
 
       left: 10px;
