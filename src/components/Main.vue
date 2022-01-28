@@ -14,7 +14,9 @@
     
     <Comic v-for="(comic,index) in fumetti" :key="index" 
     :comic="comic" />
-  
+    
+    <a href="#">LOAD MORE</a>
+
   </div>
 </div>
 
@@ -148,7 +150,7 @@ export default {
     min-height: 100px;
     padding: 20px;
 
-  .striscetta{
+    .striscetta{
       position: absolute;
 
       left: 10px;
@@ -158,6 +160,13 @@ export default {
       font-size: 18px;
       color: $secondaryColor;
       border-radius : 0px 15px 15px 0px;
+    }
+
+    a{
+      background-color: $thirdColor;
+      padding :5px 20px;
+      color:$secondaryColor;
+      text-decoration: none;
     }
   }
 }
