@@ -5,17 +5,9 @@
 
         <nav>
           <ul>
-            <li><a href="#">CHARACTERS</a></li>
-            <li><a href="#" class="active">COMICS</a></li>
-            <li><a href="#">MOVIES</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">GAMES</a></li>
-            <li><a href="#">CHARACTERS</a></li>
-            <li><a href="#">COLLECTIBLES</a></li>
-            <li><a href="#">VIDEO</a></li>
-            <li><a href="#">FANS</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">SHOP</a></li>
+            <li v-for="(element,index) in navList" :key="index">
+              <a href="#" :class="{'active' : element.current}">{{element.name}}</a>
+            </li>
           </ul>
         </nav>
     </div>
@@ -27,6 +19,53 @@
 
 export default {
   name: 'Header',
+  data(){
+    return {
+      navList : [
+        {
+          "name" : "CHARACTERS",
+          'current' : false
+        },
+        {
+          "name" : "COMICS",
+          'current' : true
+        },
+        {
+          "name" : "MOVIES",
+          'current' : false
+        },
+        {
+          "name" : "TV",
+          'current' : false
+        },
+        {
+          "name" : "GAMES",
+          'current' : false
+        },
+        {
+          "name" : "COLLECTIBLES",
+          'current' : false
+        },
+        {
+          "name" : "VIDEO",
+          'current' : false
+        },
+        {
+          "name" : "FANS",
+          'current' : false
+        },
+        {
+          "name" : "NEWS",
+          'current' : false
+        },
+        {
+          "name" : "SHOP",
+          'current' : false
+        }
+        
+      ]
+    }
+  }
 }
 </script>
 
@@ -59,6 +98,7 @@ export default {
         a{
           display:inline-block;
           text-decoration: none;
+          text-transform: uppercase;
           color: $mainColor;
           height: 100%;
         }
