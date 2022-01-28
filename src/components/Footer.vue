@@ -266,7 +266,7 @@ export default {
     .container{
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: space-around;
       min-height: 100px;
       width: 100%;
       padding: 20px;
