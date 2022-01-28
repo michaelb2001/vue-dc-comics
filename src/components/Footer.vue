@@ -36,51 +36,39 @@
 
     <div class="container">
 
-      <div class="col">
+      <div class="colonna">
         <h3>DC COMICS</h3>
         <ul>
-          <li><a href="">Characters</a></li>
-          <li><a href="">Comics</a></li>
-          <li><a href="">Movies</a></li>
-          <li><a href="">TV</a></li>
-          <li><a href="">Games</a></li>
-          <li><a href="">Videos</a></li>
-          <li><a href="">News</a></li>
+          <li v-for="(element,index) in dc_comics" :key="index">
+            <a href="">{{element.name.toLowerCase()}}</a>
+          </li>
+
         </ul>
 
         <h3>SHOP</h3>
         <ul>
-          <li><a href="">Shop DC</a></li>
-          <li><a href="">Shop DC Collectibles</a></li>
+          <li v-for="(element,index) in shop" :key="index">
+            <a href="">{{element.name.toLowerCase()}}</a>
+          </li>
         </ul>
       </div>
 
 
-      <div class="col">
+      <div class="colonna">
         <h3>DC</h3>
         <ul>
-          <li><a href="">Term of use</a></li>
-          <li><a href="">privacy policy</a></li>
-          <li><a href="">ad choices</a></li>
-          <li><a href="">advertising</a></li>
-          <li><a href="">jobs</a></li>
-          <li><a href="">subscriptions</a></li>
-          <li><a href="">telent workshops</a></li>
-          <li><a href="">CPSC certification</a></li>
-          <li><a href="">Rating</a></li>
-          <li><a href="">shop</a></li>
-          <li><a href="">concact us</a></li>
+>         <li v-for="(element,index) in dc" :key="index">
+            <a href="">{{element.name.toLowerCase()}}</a>
+          </li>
         </ul>
       </div>
 
-      <div class="col">
+      <div class="colonna">
         <h3>sites</h3>
         <ul>
-          <li><a href="">DC</a></li>
-          <li><a href="">MAD magazine</a></li>
-          <li><a href="">DC kids</a></li>
-          <li><a href="">DC universe</a></li>
-          <li><a href="">DC power visa</a></li>
+>         <li v-for="(element,index) in sites" :key="index">
+            <a href="">{{element.name.toLowerCase()}}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -90,7 +78,7 @@
 
   </div>
 
-    <div class="contenitore tre">
+  <div class="contenitore tre">
       
     <div class="container">
       <a href="#" class="btn">sing-up now!</a>
@@ -117,7 +105,7 @@
       </div>
     </div>
 
-  </div>
+</div>
 
 
 </div>
@@ -128,6 +116,105 @@
 <script>
 export default {
   name: 'Footer',
+    data(){
+    return {
+      dc_comics : [
+        {
+          name : "CHARACTERS",
+        },
+        {
+          name : "COMICS",
+        },
+        {
+          name : "MOVIES",
+        },
+        {
+          name : "TV",
+        },
+        {
+          name : "GAMES",
+        },
+        {
+          name : "COLLECTIBLES",
+        },
+        {
+          name : "VIDEO",
+        },
+        {
+          name : "FANS",
+        },
+        {
+          name : "NEWS",
+        }
+        
+      ],
+      shop : [
+        {
+          name : "Shop DC",
+        },
+        {
+          name : "Shop DC collectibles",
+        }
+      ],
+
+      dc : [
+        {
+          name : "term of use",
+        },
+        {
+          name : "privacy policy",
+        },
+        {
+          name : "ad chioces",
+        },
+        {
+          name : "advertising",
+        },
+        {
+          name : "jobs",
+        },
+        {
+          name : "subscritions",
+        },
+        {
+          name : "talent workshop",
+        },
+        {
+          name : "CPSC CERTIFICATION",
+        },
+        {
+          name : "rating",
+        },
+        {
+          name : "shop",
+        },        
+        {
+          name : "contact us",
+        }
+        
+      ],
+
+      sites : [
+        {
+          name : "DC",
+        },
+        {
+          name : "MAD magazine",
+        },
+        {
+          name : "DC Kids",
+        },
+        {
+          name : "Dc universe",
+        },        
+        {
+          name : "DC power Visa",
+        }
+      ]
+
+
+    }
+  }
 }
 </script>
 
@@ -183,7 +270,7 @@ export default {
       min-height: 100px;
       width: 100%;
       padding: 20px;
-      .col{
+      .colonna{
         text-align: start;
         align-self: start;
         h3{
